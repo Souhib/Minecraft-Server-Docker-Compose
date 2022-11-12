@@ -8,7 +8,7 @@ services:
         networks:
             - minecraft
         volumes:
-            - /home/souhib/Containers/Minecraft/data:/data
+            - /home/souhib/Containers/Minecraft/data:/data # Change the left path to match a folder on your server
         tty: true
         stdin_open: true
         restart: unless-stopped
