@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+    minecraft-server:
+        ports:
+            - '25565:25565'
+        container_name: minecraft
+        image: itzg/minecraft-server
+        networks:
+            - minecraft
+        volumes:
+            - /home/souhib/Containers/Minecraft/data:/data
+        tty: true
+        stdin_open: true
+        restart: unless-stopped
+        environment:
+            - ALLOW_NETHER=true
+            - ANNOUNCE_PLAYER_ACHIEVEMENTS=true
+            - EULA=true
+networks:
+  minecraft:
+    driver: bridge
+
